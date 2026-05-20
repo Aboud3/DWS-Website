@@ -1,0 +1,3 @@
+DWS-Logoassets wurden in public/images abgelegt:
+- dws-logo-horizontal.jpg
+- DWS_Bildmarke_23.png
