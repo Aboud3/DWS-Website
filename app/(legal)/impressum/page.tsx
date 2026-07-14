@@ -22,7 +22,6 @@ export default function ImpressumPage() {
               <p>
                 {companyContact.postalCode} {companyContact.city}
               </p>
-              <p>{companyContact.country}</p>
             </div>
           </section>
           <section className="border border-zinc-200 bg-white p-7 shadow-line">

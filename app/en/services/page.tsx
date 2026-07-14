@@ -9,38 +9,39 @@ export const metadata = getPageMetadata("services", "en");
 
 const serviceOverviews = [
   {
-    title: "Print production",
+    title: "Design",
+    href: getRoute("en", "design"),
+    text: "DWS designs print products, mailings and project-based print materials.",
+    tasks: ["Design", "Layout"],
+  },
+  {
+    title: "Print",
     href: getRoute("en", "print"),
-    text: "Business print materials, mailing components and project-based printed products.",
-    tasks: [
-      "Book printing",
-      "Digital printing",
-      "Offset printing",
-      "Mailings and inserts",
-      "Forms and business stationery",
-    ],
+    text: "DWS produces all print products, mailing components and project-based print materials.",
+    tasks: ["Book printing", "Digital printing", "Offset printing"],
   },
   {
     title: "Lettershop",
     href: getRoute("en", "lettershop"),
-    text: "Assembly, manual and machine-assisted processing and shipping preparation.",
+    text: "DWS processes mailing components and prepares shipments for planned mailings.",
     tasks: [
-      "Assembly",
-      "Manual processing",
+      "Hand assembly",
+      "Data preparation",
       "Machine-assisted processing",
       "Shipping preparation",
-      "Serial mailings",
+      "Enveloping of all kinds",
+      "Finishing",
     ],
   },
   {
     title: "Logistics",
     href: getRoute("en", "warehouseLogistics"),
-    text: "Storage, stock preparation, call-off coordination and shipping control.",
+    text: "DWS connects storage, stock provision and shipping control for project-based material flows.",
     tasks: [
       "Storage",
       "Stock preparation",
       "Just-in-time coordination",
-      "Shipping control",
+      "Shipping control / Carriers",
       "DHL/DPAG shipping processes",
     ],
   },
@@ -48,6 +49,7 @@ const serviceOverviews = [
 
 const workflowSteps = [
   "Consultation",
+  "Design",
   "Print",
   "Processing",
   "Storage",
@@ -59,19 +61,24 @@ export default function EnglishServicesPage() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Integrated print, mailing and logistics services."
-        description="DWS combines print production, lettershop services and logistics into coordinated B2B workflows."
+        title="Design, print, processing and logistics in a single process."
+        description="DWS bundles the relevant steps for print and mailing projects: from design and production through finishing to warehouse-backed shipping coordination."
       />
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-14 md:px-8 lg:grid-cols-[0.75fr_1.25fr]">
         <SectionHeading
           eyebrow="Overview"
-          title="Services that work together."
-          description="Print, processing and logistics are often connected tasks. They depend on timing, stock movement and clear coordination."
+          title="DWS combines design, print, lettershop and warehouse logistics."
+          description="The service areas can be used individually or combined into a coordinated workflow."
         />
         <div className="space-y-6 text-lg leading-8 text-zinc-600">
           <p>
-            DWS supports business customers by combining these steps in one
-            structured workflow.
+            DWS supports customers when ideas from the customer, print data,
+            material, processing, stock and shipping dates need to be brought
+            together in a single process.
+          </p>
+          <p>
+            The goal is a transparent process with clear coordination between
+            design, production, finishing, storage and shipping.
           </p>
         </div>
       </section>
@@ -96,9 +103,6 @@ export default function EnglishServicesPage() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-600">
-                    Typical tasks
-                  </h3>
                   <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                     {service.tasks.map((task) => (
                       <li
@@ -127,7 +131,7 @@ export default function EnglishServicesPage() {
           <SectionHeading
             eyebrow="Workflow"
             title="A coordinated process"
-            description="From consultation to shipping, the required steps are planned and implemented according to the project."
+            description="The work steps are planned on a project basis and coordinated with one another during implementation."
           />
           <ol className="mt-10 grid gap-4 md:grid-cols-5">
             {workflowSteps.map((step, index) => (
@@ -145,8 +149,8 @@ export default function EnglishServicesPage() {
         </div>
       </section>
       <CTASection
-        title="Need coordinated support?"
-        description="DWS connects print, lettershop and logistics steps for structured B2B workflows."
+        title="Let's talk about your next project."
+        description="Whether design of print products, production, mailing or logistics: DWS coordinates the right steps from a single source, with clear points of contact."
         buttonLabel="Contact us"
         href={getRoute("en", "contact")}
       />

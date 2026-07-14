@@ -22,8 +22,8 @@ export function Header() {
           aria-label={locale === "de" ? "DWS Startseite" : "DWS home"}
         >
           <Image
-            src="/images/dws-logo-horizontal.jpg"
-            alt="DWS Direktwerbe-Service Logo"
+            src="/images/DWS_Logo2026.jpg"
+            alt="DWS Druckwerbe-Service Logo"
             width={2480}
             height={1240}
             priority
@@ -31,8 +31,8 @@ export function Header() {
             sizes="(min-width: 768px) 260px, 180px"
           />
           <Image
-            src="/images/DWS_Bildmarke_23.png"
-            alt="DWS Direktwerbe-Service Bildmarke"
+            src="/images/DWS_Bildmarke2026.png"
+            alt="DWS Bildmarke"
             width={1240}
             height={1240}
             priority

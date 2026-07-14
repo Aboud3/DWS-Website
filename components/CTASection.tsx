@@ -9,8 +9,8 @@ type CTASectionProps = {
 };
 
 export function CTASection({
-  title = "Sprechen wir über Ihren nächsten Prozess.",
-  description = "Ob Printproduktion, Mailing oder Logistik: DWS koordiniert die passenden Schritte aus einer Hand und mit klaren Ansprechpartnern.",
+  title = "Sprechen wir über Ihr nächstes Projekt.",
+  description = "Ob Design von Printprodukten, Produktion, Mailing oder Logistik: DWS koordiniert die passenden Schritte aus einer Hand und mit klaren Ansprechpartnern.",
   buttonLabel = "Kontakt aufnehmen",
   href = getRoute("de", "contact"),
 }: CTASectionProps) {

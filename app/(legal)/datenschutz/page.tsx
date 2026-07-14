@@ -7,7 +7,7 @@ export const metadata = getPageMetadata("privacy");
 const sections = [
   {
     title: "Verantwortliche Stelle",
-    text: `${companyContact.company}, ${companyContact.street}, ${companyContact.postalCode} ${companyContact.city}, ${companyContact.country}. Kontakt: ${companyContact.email}, Telefon: ${companyContact.phone}.`,
+    text: `${companyContact.company}, ${companyContact.street}, ${companyContact.postalCode} ${companyContact.city}. Kontakt: ${companyContact.email}, Telefon: ${companyContact.phone}.`,
   },
   {
     title: "Status dieser Datenschutzhinweise",

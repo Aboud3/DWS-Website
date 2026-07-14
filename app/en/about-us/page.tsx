@@ -1,31 +1,12 @@
 import { CTASection } from "@/components/CTASection";
 import { GenerationsSection } from "@/components/GenerationsSection";
 import { HistoryRevealSection } from "@/components/HistoryRevealSection";
-import { ImageGallery, type GalleryItem } from "@/components/ImageGallery";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getRoute } from "@/lib/i18n";
 import { getPageMetadata } from "@/lib/metadata";
 
 export const metadata = getPageMetadata("about", "en");
-
-const galleryItems: GalleryItem[] = [
-  {
-    caption: "DWS Branding",
-    alt: "DWS branding on a dark surface",
-    src: "/images/gallery/dws-branding-black.jpg",
-  },
-  {
-    caption: "Logo in print",
-    alt: "DWS logo as printed material",
-    src: "/images/gallery/dws-logo-print.jpg",
-  },
-  {
-    caption: "Calendar",
-    alt: "DWS calendar as printed business material",
-    src: "/images/gallery/dws-kalender.jpg",
-  },
-];
 
 const principles = [
   {
@@ -34,7 +15,7 @@ const principles = [
   },
   {
     title: "Coordinated workflows",
-    text: "Print, lettershop and logistics are planned as connected process steps.",
+    text: "Design, print, lettershop and logistics are planned as connected process steps.",
   },
   {
     title: "Careful execution",
@@ -44,9 +25,14 @@ const principles = [
 
 const serviceAreas = [
   {
+    title: "Design",
+    description:
+      "Design, layout and print preparation for print products, mailings and project-based print materials.",
+  },
+  {
     title: "Print",
     description:
-      "Business print materials, mailing components and project-based print production.",
+      "Print products, mailing components and project-based print materials.",
   },
   {
     title: "Lettershop",
@@ -72,15 +58,10 @@ const generationPortraits = [
   {
     title: "Second generation",
     label: "Further development of the company",
-    image: {
-      src: "/images/history/second-generation-portrait.webp",
-      alt: "Historical portrait of the second generation",
-      preserveColor: true,
-    },
   },
   {
     title: "Today",
-    label: "DWS Print-Service + Logistics",
+    label: "DWS Druckwerbe-Service + Logistik",
     placeholderLabel: "DWS Today",
   },
 ];
@@ -89,9 +70,9 @@ export default function EnglishAboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About DWS Direktwerbe-Service"
-        title="Print, lettershop and logistics expertise since 1952."
-        description="DWS supports business customers with print, lettershop and logistics processes."
+        eyebrow="About us"
+        title="Design, print, lettershop and logistics since 1952."
+        description="DWS Druckwerbe-Service + Logistik GmbH supports companies and organizations with operational design, print, mailing and logistics processes."
       />
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-8 lg:grid-cols-[0.85fr_1.15fr]">
         <SectionHeading
@@ -103,11 +84,11 @@ export default function EnglishAboutPage() {
           <p>
             In 1952, businessman Karl Sander founded Rhein-Ruhr Druck Sander
             KG. From this craft background, the company developed across
-            generations into a service provider for print, lettershop and
-            logistics.
+            generations into a service provider for design, print, lettershop
+            and logistics.
           </p>
           <p>
-            Today, DWS supports business customers with operational print,
+            Today, DWS supports customers with operational design, print,
             mailing and logistics processes based on traceable coordination and
             defined responsibilities.
           </p>
@@ -132,8 +113,8 @@ export default function EnglishAboutPage() {
             warehouse logistics.
           </p>
           <p>
-            Today, DWS Druckwerbe-Service + Logistik GmbH combines print,
-            lettershop and logistics at the same location.
+            Today, DWS Druckwerbe-Service + Logistik GmbH combines design,
+            print, lettershop and logistics at the same location.
           </p>
         </div>
       </HistoryRevealSection>
@@ -145,41 +126,11 @@ export default function EnglishAboutPage() {
         portraits={generationPortraits}
       />
 
-      <section className="border-y border-zinc-200 bg-zinc-50">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:px-8 lg:grid-cols-[0.65fr_1.35fr]">
-          <SectionHeading
-            eyebrow="Development"
-            title="Company development"
-            description="The work of DWS is focused on practical implementation, the Dortmund location and coordinated workflows."
-          />
-          <ol className="grid min-w-0 gap-4 md:grid-cols-2">
-            {[
-              ["1934", "Master craftsman certificate"],
-              ["1952", "Rhein-Ruhr Druck Sander KG founded"],
-              ["1972", "Lettershop established"],
-              ["Today", "DWS Print-Service + Logistics"],
-            ].map(([year, text]) => (
-              <li
-                key={year}
-                className="min-w-0 border border-zinc-200 bg-white p-7"
-              >
-                <span className="text-sm font-semibold text-zinc-600">
-                  {year}
-                </span>
-                <h2 className="mt-6 break-words text-lg font-semibold leading-7 text-ink">
-                  {text}
-                </h2>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-8 lg:grid-cols-[0.8fr_1.2fr]">
         <SectionHeading
           eyebrow="Service network"
-          title="Three areas, one workflow"
-          description="Print, lettershop and logistics are treated as connected operational areas at DWS."
+          title="Four areas, one workflow"
+          description="Design, print, lettershop and logistics are treated as connected operational areas at DWS."
         />
         <div className="grid gap-4 md:grid-cols-3">
           {serviceAreas.map((item, index) => (
@@ -201,20 +152,7 @@ export default function EnglishAboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-zinc-200 bg-zinc-50">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:px-8">
-          <SectionHeading
-            eyebrow="Insights"
-            title="Brand and business materials"
-            description="Restrained views from brand presentation and printed business materials."
-          />
-          <div className="mt-8">
-            <ImageGallery items={galleryItems} compact unoptimized />
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-zinc-200 bg-white">
+      <section className="border-y border-zinc-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-16 md:px-8">
           <SectionHeading
             eyebrow="Approach"

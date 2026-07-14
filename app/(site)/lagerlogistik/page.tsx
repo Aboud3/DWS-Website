@@ -2,28 +2,13 @@ import Image from "next/image";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { ServiceListBlock } from "@/components/ServiceListBlock";
 import { ServicePageSections } from "@/components/ServicePageSections";
+import { WarehouseCapacitySection } from "@/components/WarehouseCapacitySection";
 import { getRoute } from "@/lib/i18n";
 import { getPageMetadata } from "@/lib/metadata";
 import type { GalleryItem } from "@/components/ImageGallery";
 
 export const metadata = getPageMetadata("warehouseLogistics");
-
-const typicalServices = [
-  "Einlagerung",
-  "Bestandsbereitstellung",
-  "Just-in-time-Koordination",
-  "Versandsteuerung",
-  "DHL/DPAG-Versandprozesse",
-];
-
-const suitableFor = [
-  "Wiederkehrende Kampagnen",
-  "Print- und Werbemittelbestände",
-  "Projektbezogene Distribution",
-  "Unternehmen mit planbarem Materialfluss",
-];
 
 const steps = [
   "Bestände übernehmen und einlagern",
@@ -48,6 +33,43 @@ const galleryItems: GalleryItem[] = [
     alt: "Kalenderansicht zur Koordination wiederkehrender Abläufe",
     src: "/images/gallery/dws-kalender.jpg",
   },
+];
+
+const warehouseCapacityLists = [
+  {
+    title: "Leistungen",
+    items: [
+      "Einlagerung Ihrer Produkte",
+      "Order-Management",
+      "Konfektionierung und Qualitätsverpackung",
+      "Lieferschein- und Rechnungsdruck",
+      "Termingerechte Auslieferung per Paketdienst, Spedition, Kurier oder Direktfahrt",
+      "Internationaler Versand einschließlich Zollabwicklung",
+      "Retouren- und Responsemanagement",
+    ],
+  },
+  {
+    title: "Einlagerung kurz- & langfristig",
+    items: [
+      "Hochregallager",
+      "Kleinteilelager",
+      "Einzellager für sperrige Güter",
+      "Sicherheitslager für empfindliche und hochwertige Waren",
+    ],
+  },
+];
+
+const warehouseMetrics = [
+  { label: "Lagerfläche", value: "1.000 m²" },
+  { label: "Nutzfläche gesamt", value: "2.500 m²" },
+  { label: "Palettenstellplätze", value: "800" },
+];
+
+const warehouseFacts = [
+  "EDV-gestützte Lagerverwaltung",
+  "Fachpersonal für Lagermanagement und Kommissionierung",
+  "Permanente Inventur",
+  "Moderne Hub- und Staplertechnik",
 ];
 
 export default function LagerlogistikPage() {
@@ -88,12 +110,15 @@ export default function LagerlogistikPage() {
         </div>
       </section>
 
-      <section className="border-b border-zinc-200 bg-white">
-        <div className="mx-auto grid max-w-7xl gap-6 px-6 py-14 md:px-8 lg:grid-cols-2">
-          <ServiceListBlock title="Typische Leistungen" items={typicalServices} />
-          <ServiceListBlock title="Geeignet für" items={suitableFor} />
-        </div>
-      </section>
+      <WarehouseCapacitySection
+        eyebrow="Lagerkapazität"
+        title="Wir haben Platz … auch für Ihre Produkte"
+        description="Wir erarbeiten mit Ihnen ein Konzept zur bedarfsorientierten und termingerechten Lieferung Ihrer Printmedien oder sonstigen Waren. Dazu gehört nicht nur die Bereitstellung von E-Mail-Accounts, sondern auch die Gewissheit, dass die richtige Menge zur richtigen Zeit in der richtigen Qualität und beim richtigen Empfänger ankommt."
+        lists={warehouseCapacityLists}
+        factsLabel="Zahlen und Fakten"
+        metrics={warehouseMetrics}
+        facts={warehouseFacts}
+      />
 
       <section className="border-y border-zinc-200 bg-zinc-50">
         <div className="mx-auto max-w-7xl px-6 py-14 md:px-8">

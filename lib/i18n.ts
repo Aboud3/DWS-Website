@@ -7,6 +7,7 @@ export const defaultLocale: Locale = "de";
 export type RouteKey =
   | "home"
   | "services"
+  | "design"
   | "print"
   | "lettershop"
   | "warehouseLogistics"
@@ -19,6 +20,7 @@ export const routes: Record<Locale, Record<RouteKey, string>> = {
   de: {
     home: "/",
     services: "/leistungen",
+    design: "/gestaltung",
     print: "/druck",
     lettershop: "/lettershop",
     warehouseLogistics: "/lagerlogistik",
@@ -30,6 +32,7 @@ export const routes: Record<Locale, Record<RouteKey, string>> = {
   en: {
     home: "/en",
     services: "/en/services",
+    design: "/en/design",
     print: "/en/print",
     lettershop: "/en/lettershop",
     warehouseLogistics: "/en/logistics",

@@ -1,7 +1,8 @@
-import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
-import { ImageGallery, type GalleryItem } from "@/components/ImageGallery";
+import { HeroSlideshow, type HeroSlide } from "@/components/HeroSlideshow";
+import type { GalleryItem } from "@/components/ImageGallery";
+import { ImageMarquee } from "@/components/ImageMarquee";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/lib/content";
@@ -15,6 +16,11 @@ const processSteps = [
     title: "Beratung",
     description:
       "Anforderungen, Mengen, Zeitplan und Versandziel werden gemeinsam abgestimmt.",
+  },
+  {
+    title: "Design",
+    description:
+      "Layout, Daten und Vorlagen werden für die weitere Umsetzung vorbereitet.",
   },
   {
     title: "Druck",
@@ -40,12 +46,12 @@ const processSteps = [
 
 const credibilityCards = [
   {
-    title: "Unternehmenstradition seit 1952",
+    title: "Tradition seit 1952",
     text: "Langjährige Erfahrung in der Umsetzung wiederkehrender Print-, Mailing- und Logistikprozesse.",
   },
   {
     title: "Alles aus einer Hand",
-    text: "Druck, Verarbeitung, Lagerung und Versand werden abgestimmt koordiniert.",
+    text: "Design, Druck, Verarbeitung, Lagerung und Versand werden als verbundene Schritte koordiniert.",
   },
   {
     title: "Klare Ansprechpartner",
@@ -61,37 +67,43 @@ const galleryItems: GalleryItem[] = [
   {
     caption: "Druckproduktion",
     alt: "Einblick in die Druckproduktion bei DWS",
-    src: "/images/gallery/druckmaschine-urbanekuenste.jpg",
+    src: "/images/gallery/einblicke/druckmaschine-urbanekuenste.png",
   },
   {
     caption: "Versandvorbereitung",
     alt: "Einblick in die Versandvorbereitung bei DWS",
-    src: "/images/gallery/mailing-kuvert.jpg",
+    src: "/images/gallery/einblicke/mailing-kuvert.png",
   },
   {
     caption: "Lagerkoordination",
     alt: "Einblick in die Lagerkoordination bei DWS",
-    src: "/images/gallery/lager-smartphone.jpg",
+    src: "/images/gallery/einblicke/lager-smartphone.png",
   },
   {
     caption: "Mailingbestandteile",
     alt: "Mailingbestandteile in der Verarbeitung bei DWS",
-    src: "/images/gallery/urbanekuenste-mailing.jpg",
+    src: "/images/gallery/einblicke/urbanekuenste-mailing.png",
   },
   {
     caption: "Konfektionierung",
     alt: "Einblick in die Konfektionierung bei DWS",
-    src: "/images/gallery/weihnachtskarte-lasercut.jpg",
-  },
-  {
-    caption: "Bestandsbereitstellung",
-    alt: "Einblick in die Bestandsbereitstellung bei DWS",
-    src: "/images/gallery/dws-kalender.jpg",
+    src: "/images/gallery/einblicke/weihnachtskarte-lasercut.png",
   },
   {
     caption: "Druckbogen",
     alt: "Druckbogen im Produktionsprozess bei DWS",
-    src: "/images/gallery/skoda-druckbogen.jpg",
+    src: "/images/gallery/einblicke/skoda-druckbogen.png",
+  },
+];
+
+const homepageServices = services.map((service, index) =>
+  index === 0 ? { ...service, title: "Design", eyebrow: "Design" } : service,
+);
+
+const heroSlides: HeroSlide[] = [
+  {
+    src: "/images/hero/og-press.png",
+    alt: "Historische Heidelberg-Druckmaschine von DWS",
   },
 ];
 
@@ -99,20 +111,20 @@ export default function HomePage() {
   return (
     <>
       <section className="overflow-hidden border-b border-zinc-200 bg-white">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:pb-32 lg:pt-24">
           <div>
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-600">
-              DWS Direktwerbe-Service Dortmund
+              DWS Druckwerbe-Service + Logistik
             </p>
-            <h1 className="max-w-3xl text-5xl font-semibold tracking-normal text-ink md:text-7xl">
-              Druck, Lettershop und Lagerlogistik aus einer Hand.
+            <h1 className="max-w-[20rem] text-3xl font-semibold tracking-normal text-ink sm:max-w-3xl sm:text-5xl md:text-7xl">
+              Design, Druck und Logistik aus einer Hand.
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-600 md:text-xl md:leading-9">
-              DWS Direktwerbe-Service unterstützt Unternehmen, Agenturen,
-              Behörden, Druckereien und Verlage bei der zuverlässigen Umsetzung
-              von Print-, Mailing- und Logistikprozessen.
+            <p className="mt-7 max-w-[20rem] text-lg leading-8 text-zinc-600 sm:max-w-2xl md:text-xl md:leading-9">
+              DWS Druckwerbe-Service + Logistik unterstützt Unternehmen, Agenturen,
+              Behörden, Druckereien, Verlage, Vereine und Privatkunden bei
+              Design, Print-, Mailing- und Logistikprozessen.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <ButtonLink href={getRoute("de", "services")}>
                 Leistungen ansehen
               </ButtonLink>
@@ -121,52 +133,18 @@ export default function HomePage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="relative min-h-[420px] lg:min-h-[540px]" aria-hidden="true">
-            <div className="absolute inset-0 border border-zinc-200 bg-zinc-50" />
-            <div className="absolute inset-6 border border-zinc-200 bg-white" />
-            <div className="absolute inset-x-6 top-6 grid grid-cols-5 border-b border-zinc-200">
-              {processSteps.map((step, index) => (
-                <div
-                  key={step.title}
-                  className="border-r border-zinc-200 px-3 py-4 last:border-r-0"
-                >
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-zinc-400">
-                    0{index + 1}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3">
-              <div className="h-24 border border-zinc-200 bg-zinc-100" />
-              <div className="h-24 border border-zinc-200 bg-white" />
-              <div className="h-24 border border-zinc-200 bg-zinc-200" />
-            </div>
-            <div className="absolute left-10 top-1/2 h-px w-[72%] bg-zinc-300" />
-            <div className="absolute left-1/2 top-20 h-[68%] w-px bg-zinc-200" />
-            <div className="absolute right-10 top-24 h-28 w-28 border border-zinc-300 bg-white" />
-            <div className="absolute bottom-24 left-10 h-20 w-36 border border-zinc-300 bg-white" />
-            <div className="absolute left-1/2 top-1/2 flex h-52 w-52 -translate-x-1/2 -translate-y-1/2 items-center justify-center md:h-64 md:w-64">
-              <Image
-                src="/images/DWS_Bildmarke_23.png"
-                alt="DWS Direktwerbe-Service Bildmarke"
-                width={1240}
-                height={1240}
-                className="h-full w-full object-contain opacity-90"
-                sizes="(min-width: 768px) 256px, 208px"
-              />
-            </div>
-          </div>
+          <HeroSlideshow slides={heroSlides} />
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-8">
         <SectionHeading
           eyebrow="Leistungen"
-          title="Drei Bereiche, ein abgestimmter Ablauf."
-          description="DWS verbindet Druckproduktion, Lettershop und Lagerlogistik so, dass Kampagnen und wiederkehrende Prozesse klar geplant und zuverlässig umgesetzt werden können."
+          title="Vier Bereiche – ein abgestimmter Ablauf."
+          description="DWS verbindet Design, Druckproduktion, Lettershop und Lagerlogistik so, dass Kampagnen und wiederkehrende Prozesse klar geplant und zuverlässig umgesetzt werden können."
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {services.map((service, index) => (
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {homepageServices.map((service, index) => (
             <ServiceCard
               key={service.href}
               service={service}
@@ -182,7 +160,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Glaubwürdigkeit"
             title="Warum DWS?"
-            description="Für Unternehmen zählt nicht nur die einzelne Leistung, sondern ein verlässlicher Ablauf."
+            description="Für Kunden zählt nicht nur die einzelne Leistung, sondern ein verlässlicher Ablauf."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {credibilityCards.map((card) => (
@@ -204,17 +182,18 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:px-8 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeading
             eyebrow="Erfahrung"
-            title="Seit 1952 in Druck und Verarbeitung verwurzelt"
+            title="Seit 1952 in Design, Druck und Verarbeitung verwurzelt"
           />
           <div className="text-lg leading-8 text-zinc-600">
             <p>
-              DWS arbeitet für Geschäftskunden, die planbare Abläufe und
-              verbindliche Kommunikation benötigen. Die Stärke liegt in der
-              Verbindung von Produktion, Verarbeitung und Versandsteuerung.
+              DWS arbeitet für Kunden, die planbare Abläufe und verbindliche
+              Kommunikation benötigen. Die Stärke liegt in der Verbindung von
+              Design, Produktion, Verarbeitung und Versandsteuerung.
             </p>
             <p className="mt-6">
               So entstehen weniger Übergaben, klare Verantwortlichkeiten und ein
-              belastbarer Prozess vom Druckprodukt bis zur Zustellung.
+              schneller Prozess von der Entwicklung bis zur Zustellung beim
+              Endkunden.
             </p>
           </div>
         </div>
@@ -223,10 +202,10 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-16 md:px-8">
         <SectionHeading
           eyebrow="Prozess"
-          title="Von der Produktion bis zur Zustellung"
+          title="Von der Idee bis zur Zustellung"
           description="Die einzelnen Schritte werden projektbezogen abgestimmt und auf Termin, Materialfluss und Versandziel ausgerichtet."
         />
-        <ol className="mt-12 grid gap-4 md:grid-cols-5">
+        <ol className="mt-12 grid gap-4 md:grid-cols-3 lg:grid-cols-6">
           {processSteps.map((step, index) => (
             <li
               key={step.title}
@@ -235,7 +214,7 @@ export default function HomePage() {
               <span className="text-sm font-semibold text-zinc-600">
                 0{index + 1}
               </span>
-              <h3 className="mt-6 text-xl font-semibold text-ink">
+              <h3 className="mt-6 min-w-0 text-[1.0625rem] font-semibold leading-7 text-ink">
                 {step.title}
               </h3>
               <p className="mt-4 text-sm leading-7 text-zinc-600">
@@ -250,11 +229,11 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-6 py-16 md:px-8">
           <SectionHeading
             eyebrow="Einblicke"
-            title="Einblicke in Druck, Verarbeitung und Versand"
-            description="Beispiele aus Produktion, Konfektionierung und logistischen Abläufen bei DWS."
+            title="Einblicke in Design, Druck, Verarbeitung und Versand"
+            description="Beispiele aus Design, Produktion, Konfektionierung und logistischen Abläufen bei DWS."
           />
           <div className="mt-10">
-            <ImageGallery items={galleryItems} />
+            <ImageMarquee items={galleryItems} />
           </div>
         </div>
       </section>
@@ -264,7 +243,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Kunden"
             title="Für wen wir arbeiten"
-            description="DWS unterstützt Geschäftskunden, die wiederkehrende Print-, Mailing- und Logistikprozesse zuverlässig umsetzen möchten."
+            description="DWS unterstützt Kunden, die Print-, Mailing- und Logistikprozesse zuverlässig umsetzen möchten – von Unternehmen und Organisationen bis zu Vereinen und privaten Auftraggebern."
           />
           <ul className="grid content-start gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[
@@ -273,6 +252,8 @@ export default function HomePage() {
               "Behörden",
               "Druckereien",
               "Verlage",
+              "Vereine",
+              "Privatkunden",
             ].map((item) => (
               <li
                 key={item}

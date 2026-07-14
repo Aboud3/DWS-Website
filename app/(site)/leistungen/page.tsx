@@ -9,27 +9,28 @@ export const metadata = getPageMetadata("services");
 
 const serviceOverviews = [
   {
+    title: "Design",
+    href: getRoute("de", "design"),
+    text: "DWS gestaltet Drucksachen, Mailings und projektbezogene Printmaterialien.",
+    tasks: ["Gestaltung", "Layout"],
+  },
+  {
     title: "Druck",
     href: getRoute("de", "print"),
-    text: "DWS produziert geschäftliche Drucksachen, Mailingbestandteile und projektbezogene Printmaterialien.",
-    tasks: [
-      "Buchdruck",
-      "Digitaldruck",
-      "Offsetdruck",
-      "Mailings und Beilagen",
-      "Formulare und Geschäftsdrucksachen",
-    ],
+    text: "DWS produziert sämtliche Drucksachen, Mailingbestandteile und projektbezogene Printmaterialien.",
+    tasks: ["Buchdruck", "Digitaldruck", "Offsetdruck"],
   },
   {
     title: "Lettershop",
     href: getRoute("de", "lettershop"),
-    text: "DWS verarbeitet Mailingbestandteile und bereitet Sendungen für planbare Aussendungen vor.",
+    text: "DWS verarbeitet Mailingbestandteile und bereitet Sendungen für geplante Aussendungen vor.",
     tasks: [
-      "Konfektionierung",
-      "Manuelle Verarbeitung",
+      "Konfektionierung von Hand",
+      "Datenaufbereitung",
       "Maschinelle Verarbeitung",
       "Versandvorbereitung",
-      "Serienmailings",
+      "Kuvertierungen jeglicher Art",
+      "Veredelung",
     ],
   },
   {
@@ -40,7 +41,7 @@ const serviceOverviews = [
       "Einlagerung",
       "Bestandsbereitstellung",
       "Just-in-time-Koordination",
-      "Versandsteuerung",
+      "Versandsteuerung / Speditionen",
       "DHL/DPAG-Versandprozesse",
     ],
   },
@@ -48,6 +49,7 @@ const serviceOverviews = [
 
 const workflowSteps = [
   "Beratung",
+  "Design",
   "Druck",
   "Konfektionierung",
   "Lagerung",
@@ -59,24 +61,25 @@ export default function LeistungenPage() {
     <>
       <PageHero
         eyebrow="Leistungen"
-        title="Druck, Verarbeitung und Logistik in einem Prozess."
-        description="DWS bündelt die relevanten Schritte für Print- und Mailingprojekte: von der Produktion über die Konfektionierung bis zur lagergestützten Versandkoordination."
+        title="Design, Druck, Verarbeitung und Logistik in einem Prozess."
+        description="DWS bündelt die relevanten Schritte für Print- und Mailingprojekte: von Design und Produktion über die Konfektionierung bis zur lagergestützten Versandkoordination."
       />
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-14 md:px-8 lg:grid-cols-[0.75fr_1.25fr]">
         <SectionHeading
           eyebrow="Überblick"
-          title="DWS kombiniert Druck, Lettershop und Lagerlogistik."
+          title="DWS kombiniert Design, Druck, Lettershop und Lagerlogistik."
           description="Die Leistungsbereiche können einzeln eingesetzt oder zu einem abgestimmten Ablauf verbunden werden."
         />
         <div className="space-y-6 text-lg leading-8 text-zinc-600">
           <p>
-            DWS unterstützt Geschäftskunden, wenn Druckdaten, Material,
-            Verarbeitung, Lagerbestand und Versandtermine zusammengeführt werden
-            müssen.
+            DWS unterstützt Kunden, wenn kundenseitige Ideen, Druckdaten,
+            Material, Verarbeitung, Lagerbestand und Versandtermine in einem
+            Prozess zusammengeführt werden müssen.
           </p>
           <p>
             Ziel ist ein nachvollziehbarer Prozess mit klarer Koordination
-            zwischen Produktion, Konfektionierung, Lagerung und Versand.
+            zwischen Design, Produktion, Konfektionierung, Lagerung und
+            Versand.
           </p>
         </div>
       </section>
@@ -101,9 +104,6 @@ export default function LeistungenPage() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-600">
-                    Typische Aufgaben
-                  </h3>
                   <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                     {service.tasks.map((task) => (
                       <li

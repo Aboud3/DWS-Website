@@ -16,6 +16,7 @@ export type Service = {
 export const navigationByLocale: Record<Locale, NavItem[]> = {
   de: [
     { label: "Leistungen", href: getRoute("de", "services") },
+    { label: "Design", href: getRoute("de", "design") },
     { label: "Druck", href: getRoute("de", "print") },
     { label: "Lettershop", href: getRoute("de", "lettershop") },
     { label: "Lagerlogistik", href: getRoute("de", "warehouseLogistics") },
@@ -24,6 +25,7 @@ export const navigationByLocale: Record<Locale, NavItem[]> = {
   ],
   en: [
     { label: "Services", href: getRoute("en", "services") },
+    { label: "Design", href: getRoute("en", "design") },
     { label: "Print", href: getRoute("en", "print") },
     { label: "Lettershop", href: getRoute("en", "lettershop") },
     {
@@ -38,6 +40,14 @@ export const navigationByLocale: Record<Locale, NavItem[]> = {
 export const navigation: NavItem[] = navigationByLocale.de;
 
 export const services: Service[] = [
+  {
+    title: "Design",
+    href: getRoute("de", "design"),
+    eyebrow: "Design",
+    description:
+      "Layout, Datenaufbereitung und druckfertige Vorbereitung als Grundlage für Produktion, Verarbeitung und Versand.",
+    points: ["Layout und Satz", "Datenaufbereitung", "Druckfertige Dateien"],
+  },
   {
     title: "Druck",
     href: getRoute("de", "print"),
@@ -65,12 +75,12 @@ export const services: Service[] = [
 ];
 
 export const companyContact = {
-  company: "DWS Druckwerbe-Service und Logistik GmbH",
-  street: "Harpener Str. 8a",
+  company: "DWS Druckwerbe-Service + Logistik GmbH",
+  street: "Hengsener Str. 8A",
   postalCode: "44309",
   city: "Dortmund",
   country: "Germany",
-  email: "post@direktwerbe-service.de",
+  email: "post@dws-logistik.de",
   phone: "0231 - 9250550",
   support: "0231 - 92505529",
 };

@@ -14,11 +14,6 @@ export default function EnglishContactPage() {
       href: "tel:+492319250550",
     },
     {
-      title: "Support",
-      value: companyContact.support,
-      href: "tel:+4923192505529",
-    },
-    {
       title: "Email",
       value: companyContact.email,
       href: `mailto:${companyContact.email}`,
@@ -50,7 +45,7 @@ export default function EnglishContactPage() {
         <address className="not-italic">
           <SectionHeading
             title="Direct contact"
-            description="Use these contact details for inquiries about print, lettershop and logistics."
+            description="Use these contact details for inquiries about design, print, lettershop and logistics."
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {contactCards.map((card) => (

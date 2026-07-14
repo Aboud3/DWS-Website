@@ -28,7 +28,7 @@ export function ImageGallery({
           >
             <Image
               src={item.src}
-              alt={item.alt}
+              alt={item.alt || item.caption}
               fill
               loading="eager"
               unoptimized={unoptimized}
@@ -37,12 +37,9 @@ export function ImageGallery({
                   ? "(min-width: 768px) 33vw, 100vw"
                   : "(min-width: 1024px) 33vw, 100vw"
               }
-              className="object-cover grayscale saturate-[0.75] contrast-[0.95] transition-transform duration-300 ease-out group-hover:scale-[1.025]"
+              className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.025]"
             />
           </div>
-          <figcaption className="mt-3 text-sm font-semibold text-zinc-700">
-            {item.caption}
-          </figcaption>
         </figure>
       ))}
     </div>

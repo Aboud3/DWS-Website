@@ -53,7 +53,7 @@ export function GenerationsSection({
                         : "grayscale saturate-[0.7] contrast-[1.02]"
                     }`}
                   />
-                ) : (
+                ) : portrait.placeholderLabel ? (
                   <>
                     <span className="pointer-events-none absolute text-6xl font-semibold tracking-normal text-zinc-900/[0.035]">
                       DWS
@@ -62,7 +62,7 @@ export function GenerationsSection({
                       {portrait.placeholderLabel}
                     </span>
                   </>
-                )}
+                ) : null}
               </div>
               <h2 className="mt-6 text-xl font-semibold text-ink">
                 {portrait.title}

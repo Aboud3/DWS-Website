@@ -14,13 +14,13 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const classes =
     variant === "primary"
-      ? "bg-ink text-white hover:bg-zinc-800"
-      : "bg-white text-ink shadow-line hover:bg-zinc-100";
+      ? "border-ink bg-ink text-white hover:bg-zinc-800"
+      : "border-zinc-500 bg-white text-ink shadow-line hover:bg-zinc-100";
 
   return (
     <Link
       href={href}
-      className={`inline-flex min-h-12 items-center justify-center px-5 text-sm font-semibold transition-colors ${classes}`}
+      className={`inline-flex h-12 items-center justify-center border px-6 text-sm font-semibold leading-none transition-colors ${classes}`}
     >
       {children}
     </Link>

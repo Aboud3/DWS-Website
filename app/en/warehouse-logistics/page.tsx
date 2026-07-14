@@ -1,8 +1,46 @@
 import { EnglishServicePage } from "@/app/en/_components/EnglishServicePage";
+import { WarehouseCapacitySection } from "@/components/WarehouseCapacitySection";
 import { getRoute } from "@/lib/i18n";
 import { getPageMetadata } from "@/lib/metadata";
 
 export const metadata = getPageMetadata("warehouseLogistics", "en");
+
+const warehouseCapacityLists = [
+  {
+    title: "Services",
+    items: [
+      "Storage of your products",
+      "Order management",
+      "Assembly and quality packaging",
+      "Delivery-note and invoice printing",
+      "On-time delivery by parcel service, freight forwarder, courier or direct transport",
+      "International shipping including customs handling",
+      "Returns and response management",
+    ],
+  },
+  {
+    title: "Short- & long-term storage",
+    items: [
+      "High-bay warehouse",
+      "Small-parts storage",
+      "Individual storage for bulky goods",
+      "Secure storage for sensitive and high-value goods",
+    ],
+  },
+];
+
+const warehouseMetrics = [
+  { label: "Storage area", value: "1,000 m²" },
+  { label: "Total usable area", value: "2,500 m²" },
+  { label: "Pallet spaces", value: "800" },
+];
+
+const warehouseFacts = [
+  "Computerised warehouse management",
+  "Specialist staff for warehouse management and picking",
+  "Perpetual inventory",
+  "Modern lifting and forklift equipment",
+];
 
 export default function EnglishWarehouseLogisticsPage() {
   return (
@@ -27,19 +65,17 @@ export default function EnglishWarehouseLogisticsPage() {
           alt: "Warehouse coordination with a smartphone in the working area",
         },
       }}
-      typicalServices={[
-        "Storage",
-        "Stock preparation",
-        "Just-in-time coordination",
-        "Shipping control",
-        "DHL/DPAG shipping processes",
-      ]}
-      suitableFor={[
-        "Recurring campaigns",
-        "Print and advertising material stock",
-        "Project-based distribution",
-        "Companies with planned stock movement",
-      ]}
+      detailsSection={
+        <WarehouseCapacitySection
+          eyebrow="Storage capacity"
+          title="We have space … for your products too"
+          description="Together with you, we develop a concept for the demand-based, on-time delivery of your print media or other goods. That includes not just providing e-mail accounts, but also the certainty that the right quantity arrives at the right time, in the right quality, with the right recipient."
+          lists={warehouseCapacityLists}
+          factsLabel="Facts & figures"
+          metrics={warehouseMetrics}
+          facts={warehouseFacts}
+        />
+      }
       coordination={{
         eyebrow: "Dortmund",
         title: "Centralized operational coordination.",
@@ -90,7 +126,7 @@ export default function EnglishWarehouseLogisticsPage() {
           "Storage and shipping can be linked more closely so recurring processes remain easier to plan.",
         galleryTitle: "Storage and coordination views",
         galleryDescription:
-          "Selected views from warehouse coordination and scheduling.",
+          "Examples from warehouse coordination and scheduling.",
       }}
       ctaTitle="Looking for a warehouse-supported shipping solution?"
       ctaDescription="DWS supports storage, stock preparation and shipping coordination for recurring B2B workflows."

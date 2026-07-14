@@ -1,7 +1,6 @@
 import { CTASection } from "@/components/CTASection";
 import { GenerationsSection } from "@/components/GenerationsSection";
 import { HistoryRevealSection } from "@/components/HistoryRevealSection";
-import { ImageGallery, type GalleryItem } from "@/components/ImageGallery";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getPageMetadata } from "@/lib/metadata";
@@ -15,7 +14,7 @@ const principles = [
   },
   {
     title: "Koordinierte Abläufe",
-    text: "Druck, Lettershop und Lagerlogistik werden als verbundene Prozessschritte geplant.",
+    text: "Design, Druck, Lettershop und Lagerlogistik werden als verbundene Prozessschritte geplant.",
   },
   {
     title: "Sorgfältige Umsetzung",
@@ -23,34 +22,21 @@ const principles = [
   },
 ];
 
-const galleryItems: GalleryItem[] = [
-  {
-    caption: "DWS Branding",
-    alt: "DWS Branding auf schwarzem Untergrund",
-    src: "/images/gallery/dws-branding-black.jpg",
-  },
-  {
-    caption: "Logo im Druck",
-    alt: "DWS Logo als gedrucktes Material",
-    src: "/images/gallery/dws-logo-print.jpg",
-  },
-  {
-    caption: "Kalender",
-    alt: "DWS Kalender als gedrucktes Geschäftsmaterial",
-    src: "/images/gallery/dws-kalender.jpg",
-  },
-];
-
 const serviceAreas = [
+  {
+    title: "Design",
+    description:
+      "Design, Layout und Druckvorbereitung für Drucksachen, Mailings und projektbezogene Printmaterialien.",
+  },
   {
     title: "Druck",
     description:
-      "Geschäftsdrucksachen, Mailingbestandteile und projektbezogene Druckproduktion.",
+      "Drucksachen, Mailingbestandteile und projektbezogene Printmaterialien.",
   },
   {
     title: "Lettershop",
     description:
-      "Konfektionierung, Verarbeitung und Versandvorbereitung für planbare Aussendungen.",
+      "Konfektionierung, Verarbeitung und Versandvorbereitung für geplante Aussendungen.",
   },
   {
     title: "Lagerlogistik",
@@ -71,11 +57,6 @@ const generationPortraits = [
   {
     title: "Zweite Generation",
     label: "Weiterentwicklung des Unternehmens",
-    image: {
-      src: "/images/history/second-generation-portrait.webp",
-      alt: "Historisches Porträt der zweiten Generation",
-      preserveColor: true,
-    },
   },
   {
     title: "Heute",
@@ -89,8 +70,8 @@ export default function UeberUnsPage() {
     <>
       <PageHero
         eyebrow="Über uns"
-        title="Druck, Lettershop und Lagerlogistik seit 1952."
-        description="DWS Direktwerbe-Service unterstützt Unternehmen und Organisationen bei operativen Print-, Mailing- und Logistikprozessen."
+        title="Design, Druck, Lettershop und Lagerlogistik seit 1952."
+        description="DWS Druckwerbe-Service + Logistik GmbH unterstützt Unternehmen und Organisationen bei operativen Design-, Print-, Mailing- und Logistikprozessen."
       />
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-8 lg:grid-cols-[0.85fr_1.15fr]">
         <SectionHeading
@@ -102,11 +83,11 @@ export default function UeberUnsPage() {
           <p>
             1952 gründete der Kaufmann Karl Sander die Rhein-Ruhr Druck Sander
             KG. Aus dem handwerklichen Ursprung entwickelte sich über mehrere
-            Generationen ein Dienstleister für Druck, Lettershop und
+            Generationen ein Dienstleister für Design, Druck, Lettershop und
             Lagerlogistik.
           </p>
           <p>
-            Heute unterstützt DWS Geschäftskunden bei operativen Print-,
+            Heute unterstützt DWS Kunden bei operativen Design-, Print-,
             Mailing- und Logistikprozessen mit nachvollziehbarer Koordination
             und festen Zuständigkeiten.
           </p>
@@ -131,8 +112,8 @@ export default function UeberUnsPage() {
             Lagerlogistik.
           </p>
           <p>
-            Heute verbindet DWS Druckwerbe-Service + Logistik GmbH Druck,
-            Lettershop und Lagerlogistik am selben Standort.
+            Heute verbindet DWS Druckwerbe-Service + Logistik GmbH Design,
+            Druck, Lettershop und Lagerlogistik am selben Standort.
           </p>
         </div>
       </HistoryRevealSection>
@@ -144,47 +125,11 @@ export default function UeberUnsPage() {
         portraits={generationPortraits}
       />
 
-      <section className="border-y border-zinc-200 bg-zinc-50">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:px-8 lg:grid-cols-[0.65fr_1.35fr]">
-          <SectionHeading
-            eyebrow="Entwicklung"
-            title="Unternehmensentwicklung"
-            description="Die Arbeit von DWS ist auf praktische Umsetzung, Standort Dortmund und abgestimmte Abläufe ausgerichtet."
-          />
-          <ol className="grid min-w-0 gap-4 md:grid-cols-2">
-            <li className="min-w-0 border border-zinc-200 bg-white p-7">
-              <span className="text-sm font-semibold text-zinc-600">1934</span>
-              <h2 className="mt-6 break-words text-lg font-semibold leading-7 text-ink">
-                Meisterbrief
-              </h2>
-            </li>
-            <li className="min-w-0 border border-zinc-200 bg-white p-7">
-              <span className="text-sm font-semibold text-zinc-600">1952</span>
-              <h2 className="mt-6 break-words text-lg font-semibold leading-7 text-ink">
-                Gründung Rhein-Ruhr Druck Sander KG
-              </h2>
-            </li>
-            <li className="min-w-0 border border-zinc-200 bg-white p-7">
-              <span className="text-sm font-semibold text-zinc-600">1972</span>
-              <h2 className="mt-6 break-words text-lg font-semibold leading-7 text-ink">
-                Aufbau Lettershop
-              </h2>
-            </li>
-            <li className="min-w-0 border border-zinc-200 bg-white p-7">
-              <span className="text-sm font-semibold text-zinc-600">Heute</span>
-              <h2 className="mt-6 break-words text-lg font-semibold leading-7 text-ink">
-                DWS Druckwerbe-Service + Logistik
-              </h2>
-            </li>
-          </ol>
-        </div>
-      </section>
-
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-8 lg:grid-cols-[0.8fr_1.2fr]">
         <SectionHeading
           eyebrow="Leistungsverbund"
-          title="Drei Bereiche, ein Ablauf"
-          description="Druck, Lettershop und Lagerlogistik werden bei DWS als zusammenhängende operative Bereiche betrachtet."
+          title="Vier Bereiche, ein Ablauf"
+          description="Design, Druck, Lettershop und Lagerlogistik werden bei DWS als zusammenhängende operative Bereiche betrachtet."
         />
         <div className="grid gap-4 md:grid-cols-3">
           {serviceAreas.map((item, index) => (
@@ -206,20 +151,7 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="border-y border-zinc-200 bg-zinc-50">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:px-8">
-          <SectionHeading
-            eyebrow="Einblicke"
-            title="Marke und Geschäftsausstattung"
-            description="Zurückhaltende Ansichten aus Markenauftritt und gedruckten Geschäftsmaterialien."
-          />
-          <div className="mt-8">
-            <ImageGallery items={galleryItems} compact unoptimized />
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-zinc-200 bg-white">
+      <section className="border-y border-zinc-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-16 md:px-8">
           <SectionHeading
             eyebrow="Arbeitsweise"

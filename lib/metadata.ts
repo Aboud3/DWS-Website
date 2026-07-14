@@ -13,82 +13,92 @@ export const localizedMetadata: Record<
   de: {
     default: {
       title: {
-        default: "DWS Direktwerbe-Service",
+        default: "DWS Druckwerbe-Service + Logistik",
         template: "%s | DWS",
       },
       description:
-        "DWS Direktwerbe-Service in Dortmund: Druck, Lettershop, Fulfillment und Lagerlogistik aus einer Hand.",
+        "DWS Druckwerbe-Service + Logistik in Dortmund: Design, Druck, Lettershop, Fulfillment und Lagerlogistik aus einer Hand.",
     },
     pages: {
       home: {
         title: "Startseite",
         description:
-          "DWS Direktwerbe-Service in Dortmund verbindet Druck, Lettershop und Lagerlogistik für Geschäftskunden.",
+          "DWS Druckwerbe-Service + Logistik in Dortmund verbindet Design, Druck, Lettershop und Lagerlogistik für Unternehmen, Organisationen, Vereine und Privatkunden.",
       },
       services: {
         title: "Leistungen",
         description:
-          "Integrierte Leistungen für Druck, Lettershop, Fulfillment und Lagerlogistik bei DWS Direktwerbe-Service.",
+          "Integrierte Leistungen für Design, Druck, Lettershop, Fulfillment und Lagerlogistik bei DWS Druckwerbe-Service + Logistik.",
+      },
+      design: {
+        title: "Design",
+        description:
+          "Design, Layout und druckfertige Datenvorbereitung für Druck, Mailing und Logistik bei DWS Druckwerbe-Service + Logistik.",
       },
       print: {
         title: "Druck",
         description:
-          "Buchdruck, Digitaldruck und Offsetdruck für B2B-Projekte bei DWS Direktwerbe-Service in Dortmund.",
+          "Buchdruck, Digitaldruck und Offsetdruck für Projekte bei DWS Druckwerbe-Service + Logistik in Dortmund.",
       },
       lettershop: {
         title: "Lettershop",
         description:
-          "Konfektionierung, manuelle und maschinelle Verarbeitung sowie Versandlösungen bei DWS Direktwerbe-Service.",
+          "Konfektionierung, manuelle und maschinelle Verarbeitung sowie Versandlösungen bei DWS Druckwerbe-Service + Logistik.",
       },
       warehouseLogistics: {
         title: "Lagerlogistik",
         description:
-          "Einlagerung, Just-in-time-Koordination und Versand über DHL/DPAG bei DWS Direktwerbe-Service.",
+          "Einlagerung, Just-in-time-Koordination und Versand über DHL/DPAG bei DWS Druckwerbe-Service + Logistik.",
       },
       about: {
         title: "Über uns",
         description:
-          "DWS Direktwerbe-Service ist ein B2B-Dienstleister aus Dortmund für Druck, Lettershop, Fulfillment und Lagerlogistik.",
+          "DWS Druckwerbe-Service + Logistik ist ein Dienstleister aus Dortmund für Design, Druck, Lettershop, Fulfillment und Lagerlogistik.",
       },
       contact: {
         title: "Kontakt",
         description:
-          "Kontakt zu DWS Direktwerbe-Service in Dortmund für Druck, Lettershop, Fulfillment und Lagerlogistik.",
+          "Kontakt zu DWS Druckwerbe-Service + Logistik in Dortmund für Design, Druck, Lettershop, Fulfillment und Lagerlogistik.",
       },
       imprint: {
         title: "Impressum",
-        description: "Impressum der DWS Direktwerbe-Service Website.",
+        description: "Impressum der Website von DWS Druckwerbe-Service + Logistik GmbH.",
       },
       privacy: {
         title: "Datenschutz",
-        description: "Datenschutzhinweise der DWS Direktwerbe-Service Website.",
+        description: "Datenschutzhinweise der Website von DWS Druckwerbe-Service + Logistik GmbH.",
       },
     },
   },
   en: {
     default: {
       title: {
-        default: "DWS Direktwerbe-Service",
+        default: "DWS Druckwerbe-Service + Logistik",
         template: "%s | DWS",
       },
       description:
-        "DWS Direktwerbe-Service in Dortmund: print, lettershop, fulfillment and logistics from a single source.",
+        "DWS Druckwerbe-Service + Logistik in Dortmund: design, print, lettershop, fulfillment and logistics from a single source.",
     },
     pages: {
       home: {
         title: "Home",
         description:
-          "DWS supports B2B print, lettershop and logistics processes from Dortmund.",
+          "DWS supports design, print, lettershop and logistics processes from Dortmund.",
       },
       services: {
         title: "Services",
         description:
-          "Integrated print, lettershop and logistics services from DWS Direktwerbe-Service.",
+          "Integrated design, print, lettershop and logistics services from DWS Druckwerbe-Service + Logistik.",
+      },
+      design: {
+        title: "Design",
+        description:
+          "Design, layout and print-ready data preparation for print, mailing and logistics workflows at DWS Druckwerbe-Service + Logistik.",
       },
       print: {
         title: "Print",
         description:
-          "Print production for business materials, mailing components and structured B2B workflows.",
+          "Print production for business materials, mailing components and structured workflows.",
       },
       lettershop: {
         title: "Lettershop",
@@ -98,27 +108,27 @@ export const localizedMetadata: Record<
       warehouseLogistics: {
         title: "Logistics",
         description:
-          "Storage, stock preparation and shipping coordination for B2B processes.",
+          "Storage, stock preparation and shipping coordination for structured processes.",
       },
       about: {
         title: "About Us",
         description:
-          "DWS Direktwerbe-Service is a B2B service provider from Dortmund with a company history reaching back to 1952.",
+          "DWS Druckwerbe-Service + Logistik is a Dortmund-based service provider for design, print, lettershop, fulfillment and logistics with a company history reaching back to 1952.",
       },
       contact: {
         title: "Contact",
         description:
-          "Contact DWS Direktwerbe-Service for print, lettershop and logistics inquiries.",
+          "Contact DWS Druckwerbe-Service + Logistik for design, print, lettershop and logistics inquiries.",
       },
       imprint: {
         title: "Imprint",
         description:
-          "English imprint placeholder for the DWS Direktwerbe-Service website.",
+          "English imprint placeholder for the website of DWS Druckwerbe-Service + Logistik GmbH.",
       },
       privacy: {
         title: "Privacy Policy",
         description:
-          "English privacy policy placeholder for the DWS Direktwerbe-Service website.",
+          "English privacy policy placeholder for the website of DWS Druckwerbe-Service + Logistik GmbH.",
       },
     },
   },

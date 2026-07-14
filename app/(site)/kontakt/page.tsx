@@ -14,11 +14,6 @@ export default function KontaktPage() {
       href: "tel:+492319250550",
     },
     {
-      title: "Support",
-      value: companyContact.support,
-      href: "tel:+4923192505529",
-    },
-    {
       title: "E-Mail",
       value: companyContact.email,
       href: `mailto:${companyContact.email}`,
@@ -50,7 +45,7 @@ export default function KontaktPage() {
         <address className="not-italic">
           <SectionHeading
             title="Direkter Kontakt"
-            description="Für Anfragen zu Druck, Lettershop und Lagerlogistik stehen die folgenden Kontaktdaten zur Verfügung."
+            description="Für Anfragen zu Design, Druck, Lettershop und Lagerlogistik stehen die folgenden Kontaktdaten zur Verfügung."
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {contactCards.map((card) => (
@@ -79,8 +74,6 @@ export default function KontaktPage() {
                 {companyContact.street}
                 <br />
                 {companyContact.postalCode} {companyContact.city}
-                <br />
-                {companyContact.country}
               </p>
             </section>
           </div>

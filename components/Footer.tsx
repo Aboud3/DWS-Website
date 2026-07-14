@@ -17,21 +17,21 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-4">
             <Image
-              src="/images/DWS_Bildmarke_23.png"
-              alt="DWS Direktwerbe-Service Bildmarke"
+              src="/images/DWS_Bildmarke2026.png"
+              alt="DWS Bildmarke"
               width={1240}
               height={1240}
               className="h-10 w-10 object-contain"
               sizes="40px"
             />
             <p className="max-w-xs text-base font-bold leading-6 text-ink">
-              DWS Druckwerbe-Service und Logistik
+              DWS Druckwerbe-Service + Logistik
             </p>
           </div>
           <p className="mt-4 max-w-xs border-t border-zinc-200 pt-4 text-sm leading-6 text-zinc-600">
             {locale === "de"
-              ? "B2B-Dienstleister in Dortmund für integrierte Druck-, Lettershop-, Fulfillment- und Lagerlogistikprozesse."
-              : "B2B service provider in Dortmund for integrated print, lettershop, fulfillment and logistics processes."}
+              ? "Dienstleister in Dortmund für Design, Druck, Lettershop, Fulfillment und Lagerlogistik."
+              : "Service provider in Dortmund for design, print, lettershop, fulfillment and logistics."}
           </p>
         </div>
         <div>
@@ -58,17 +58,11 @@ export function Footer() {
             <p>
               {companyContact.postalCode} {companyContact.city}
             </p>
-            <p>{companyContact.country}</p>
+            {locale === "en" ? <p>{companyContact.country}</p> : null}
             <p>
               {locale === "de" ? "Telefon" : "Phone"}:{" "}
               <a href="tel:+492319250550" className="font-medium transition-colors hover:text-ink">
                 {companyContact.phone}
-              </a>
-            </p>
-            <p>
-              Support:{" "}
-              <a href="tel:+4923192505529" className="font-medium transition-colors hover:text-ink">
-                {companyContact.support}
               </a>
             </p>
             <p>
@@ -85,7 +79,7 @@ export function Footer() {
       </div>
       <div className="border-t border-zinc-200">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 text-sm text-zinc-600 md:flex-row md:items-center md:justify-between md:px-8">
-          <p>© 2026 DWS Druckwerbe-Service und Logistik GmbH.</p>
+          <p>© 2026 DWS Druckwerbe-Service + Logistik GmbH.</p>
           <div className="flex gap-5">
             <Link href={getRoute(locale, "imprint")} className="transition-colors hover:text-ink">
               {locale === "de" ? "Impressum" : "Imprint"}
