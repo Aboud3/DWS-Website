@@ -32,7 +32,7 @@ export function Header() {
           />
           <Image
             src="/images/DWS_Bildmarke2026.png"
-            alt="DWS Bildmarke"
+            alt=""
             width={1240}
             height={1240}
             priority

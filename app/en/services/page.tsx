@@ -62,7 +62,7 @@ export default function EnglishServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Design, print, processing and logistics in a single process."
-        description="DWS bundles the relevant steps for print and mailing projects: from design and production through finishing to warehouse-backed shipping coordination."
+        description="DWS bundles the relevant steps for print and mailing projects: from design and production through processing to warehouse-backed shipping coordination."
       />
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-14 md:px-8 lg:grid-cols-[0.75fr_1.25fr]">
         <SectionHeading
@@ -78,7 +78,7 @@ export default function EnglishServicesPage() {
           </p>
           <p>
             The goal is a transparent process with clear coordination between
-            design, production, finishing, storage and shipping.
+            design, production, processing, storage and shipping.
           </p>
         </div>
       </section>

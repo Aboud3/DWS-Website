@@ -123,12 +123,12 @@ export const localizedMetadata: Record<
       imprint: {
         title: "Imprint",
         description:
-          "English imprint placeholder for the website of DWS Druckwerbe-Service + Logistik GmbH.",
+          "Imprint of the DWS Druckwerbe-Service + Logistik GmbH website.",
       },
       privacy: {
         title: "Privacy Policy",
         description:
-          "English privacy policy placeholder for the website of DWS Druckwerbe-Service + Logistik GmbH.",
+          "Privacy information for the DWS Druckwerbe-Service + Logistik GmbH website.",
       },
     },
   },

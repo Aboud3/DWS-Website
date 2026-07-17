@@ -18,7 +18,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <Image
               src="/images/DWS_Bildmarke2026.png"
-              alt="DWS Bildmarke"
+              alt=""
               width={1240}
               height={1240}
               className="h-10 w-10 object-contain"
