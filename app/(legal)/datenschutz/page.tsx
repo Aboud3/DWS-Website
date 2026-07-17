@@ -8,13 +8,13 @@ const linkClass =
 
 const sectionClass = "scroll-mt-24 space-y-5";
 const subsectionClass = "space-y-3";
-const paragraphClass = "text-base leading-7 text-zinc-700";
-const h2Class = "text-2xl font-semibold text-ink md:text-3xl";
-const h3Class = "text-xl font-semibold text-ink";
-const h4Class = "text-lg font-semibold text-ink";
+const paragraphClass = "text-[15px] leading-7 text-zinc-700";
+const h2Class = "text-xl font-semibold text-ink md:text-2xl";
+const h3Class = "text-lg font-semibold text-ink";
+const h4Class = "text-base font-semibold text-ink";
 const decimalListClass =
-  "list-decimal space-y-2 pl-6 text-base leading-7 text-zinc-700";
-const olClass = "space-y-2 pl-0 text-base leading-7 text-zinc-700";
+  "list-decimal space-y-2 pl-6 text-[15px] leading-7 text-zinc-700";
+const olClass = "space-y-2 pl-0 text-[15px] leading-7 text-zinc-700";
 
 const tocItems = [
   {
@@ -62,20 +62,22 @@ function ParenList({ items }: { items: string[] }) {
 export default function DatenschutzPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Rechtliches"
-        title="Datenschutz"
-        description="Datenschutzerklärung"
-      />
+      <div className="[&_h1]:!text-3xl [&_h1]:md:!text-5xl [&_p.mt-6]:!text-base [&_p.mt-6]:md:!text-lg">
+        <PageHero
+          eyebrow="Rechtliches"
+          title="Datenschutz"
+          description="Datenschutzerklärung"
+        />
+      </div>
       <section className="mx-auto max-w-5xl px-6 py-14 md:px-8">
         <nav
           aria-labelledby="datenschutz-inhalt"
           className="border border-zinc-200 bg-zinc-50 p-6"
         >
-          <h2 id="datenschutz-inhalt" className="text-lg font-semibold text-ink">
+          <h2 id="datenschutz-inhalt" className="text-base font-semibold text-ink">
             Inhalt
           </h2>
-          <ul className="mt-4 list-none space-y-2 pl-0 text-base leading-7 text-zinc-700">
+          <ul className="mt-4 list-none space-y-2 pl-0 text-[15px] leading-7 text-zinc-700">
             {tocItems.map((item) => (
               <li key={item.href}>
                 <a
@@ -97,7 +99,7 @@ export default function DatenschutzPage() {
           </ul>
         </nav>
 
-        <div className="mt-12 space-y-12 text-base leading-7 text-zinc-700 [overflow-wrap:anywhere]">
+        <div className="mt-12 space-y-12 text-[15px] leading-7 text-zinc-700 [overflow-wrap:anywhere]">
           <section id="verantwortlicher" className={sectionClass}>
             <h2 className={h2Class}>
               I. Name und Anschrift des Verantwortlichen

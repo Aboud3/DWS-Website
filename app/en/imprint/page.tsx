@@ -12,13 +12,15 @@ const openingParagraph =
 export default function EnglishImprintPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Legal"
-        title="Imprint"
-        description={openingParagraph}
-      />
+      <div className="[&_h1]:!text-3xl [&_h1]:md:!text-5xl [&_p.mt-6]:!text-[15px] [&_p.mt-6]:md:!text-base">
+        <PageHero
+          eyebrow="Legal"
+          title="Imprint"
+          description={openingParagraph}
+        />
+      </div>
       <section className="mx-auto max-w-5xl px-6 py-14 md:px-8">
-        <div className="space-y-10 text-base leading-7 text-zinc-700 [overflow-wrap:anywhere]">
+        <div className="space-y-10 text-[15px] leading-7 text-zinc-700 [overflow-wrap:anywhere]">
           <address className="border border-zinc-200 bg-white p-7 not-italic shadow-line">
             <p>DWS Druckwerbe-Service + Logistik GmbH</p>
             <p>(abbreviated as DWS)</p>
@@ -45,7 +47,7 @@ export default function EnglishImprintPage() {
           </p>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Content of the online offering:
             </h2>
             <p>
@@ -61,7 +63,7 @@ export default function EnglishImprintPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               References and links:
             </h2>
             <p>
@@ -88,7 +90,7 @@ export default function EnglishImprintPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Google Analytics:
             </h2>
             <p>
@@ -130,7 +132,7 @@ export default function EnglishImprintPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Consumer information on online dispute resolution pursuant to
               Article 14(1) of the ODR Regulation:
             </h2>
@@ -150,7 +152,7 @@ export default function EnglishImprintPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Notice pursuant to Section 36 of the German Consumer Dispute
               Resolution Act (VSBG):
             </h2>

@@ -12,13 +12,15 @@ const openingParagraph =
 export default function ImpressumPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Rechtliches"
-        title="Impressum"
-        description={openingParagraph}
-      />
+      <div className="[&_h1]:!text-3xl [&_h1]:md:!text-5xl [&_p.mt-6]:!text-[15px] [&_p.mt-6]:md:!text-base">
+        <PageHero
+          eyebrow="Rechtliches"
+          title="Impressum"
+          description={openingParagraph}
+        />
+      </div>
       <section className="mx-auto max-w-5xl px-6 py-14 md:px-8">
-        <div className="space-y-10 text-base leading-7 text-zinc-700 [overflow-wrap:anywhere]">
+        <div className="space-y-10 text-[15px] leading-7 text-zinc-700 [overflow-wrap:anywhere]">
           <address className="border border-zinc-200 bg-white p-7 not-italic shadow-line">
             <p>DWS Druckwerbe-Service + Logistik GmbH</p>
             <p>(abgekürzt DWS)</p>
@@ -46,7 +48,7 @@ export default function ImpressumPage() {
           </p>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Inhalt des Onlineangebotes:
             </h2>
             <p>
@@ -64,7 +66,7 @@ export default function ImpressumPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Verweise und Links:
             </h2>
             <p>
@@ -93,7 +95,7 @@ export default function ImpressumPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Google Analytics:
             </h2>
             <p>
@@ -140,7 +142,7 @@ export default function ImpressumPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Verbraucherinformation zur Online-Streitbeilegung gemäß Art 14
               Abs. 1 ODR-Verordnung:
             </h2>
@@ -160,7 +162,7 @@ export default function ImpressumPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-semibold text-ink">
+            <h2 className="text-xl font-semibold text-ink">
               Hinweis gemäß § 36 Verbraucherstreitbeilegungsgesetz (VSBG):
             </h2>
             <p>
