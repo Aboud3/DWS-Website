@@ -44,9 +44,9 @@ export function PrintMethodAccordion({
                   onClick={() => {
                     setOpenMethod(isOpen ? null : method.title);
                   }}
-                  className="group flex w-full select-none items-center justify-between gap-4 text-left transition-colors focus-visible:outline-none"
+                  className="group flex w-full select-none flex-col items-start gap-3 text-left transition-colors focus-visible:outline-none sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                 >
-                  <span className="text-xl font-semibold leading-7 text-ink">
+                  <span className="min-w-0 text-xl font-semibold leading-7 text-ink">
                     {method.title}
                   </span>
                   <span className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border border-zinc-400 bg-white px-3.5 text-sm font-semibold text-ink shadow-line transition-colors group-hover:border-ink group-focus-visible:ring-2 group-focus-visible:ring-ink group-focus-visible:ring-offset-2">

@@ -29,7 +29,7 @@ export default function KontaktPage() {
       />
       <section className="border-b border-zinc-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-10 md:px-8">
-          <div className="relative aspect-[5/1] min-h-40 overflow-hidden border border-zinc-200 bg-white">
+          <div className="relative h-40 overflow-hidden border border-zinc-200 bg-white md:h-auto md:aspect-[5/1]">
             <Image
               src="/images/gallery/mailing-kuvert.jpg"
               alt="Kuvert als Bestandteil einer Versandvorbereitung bei DWS"
