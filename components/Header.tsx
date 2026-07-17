@@ -51,21 +51,25 @@ export function Header() {
           </Link>
         </div>
       </div>
-      <nav
-        aria-label={
-          locale === "de" ? "Mobile Hauptnavigation" : "Mobile main navigation"
-        }
-        className="flex gap-5 overflow-x-auto border-t border-zinc-200 px-6 py-3 text-sm font-medium text-zinc-700 lg:hidden"
-      >
-        {navigation.map((item) => (
-          <Link key={item.href} href={item.href} className="shrink-0">
-            {item.label}
-          </Link>
-        ))}
+      <div className="flex border-t border-zinc-200 bg-white lg:hidden">
+        <nav
+          aria-label={
+            locale === "de"
+              ? "Mobile Hauptnavigation"
+              : "Mobile main navigation"
+          }
+          className="flex min-w-0 flex-1 gap-5 overflow-x-auto px-6 py-3 text-sm font-medium text-zinc-700"
+        >
+          {navigation.map((item) => (
+            <Link key={item.href} href={item.href} className="shrink-0">
+              {item.label}
+            </Link>
+          ))}
+        </nav>
         <LanguageSwitcher
-          className="sticky right-0 -mr-6 flex shrink-0 items-center gap-2 self-center border-l border-zinc-200 bg-white pl-5 pr-6 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 lg:hidden"
+          className="flex shrink-0 items-center gap-2 self-center border-l border-zinc-200 bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 lg:hidden"
         />
-      </nav>
+      </div>
     </header>
   );
 }
