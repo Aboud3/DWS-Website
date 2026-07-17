@@ -9,7 +9,16 @@ import {
   type Locale,
 } from "@/lib/i18n";
 
-export function LanguageSwitcher() {
+type LanguageSwitcherProps = {
+  className?: string;
+};
+
+const defaultClassName =
+  "hidden items-center gap-2 self-center text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 lg:flex";
+
+export function LanguageSwitcher({
+  className = defaultClassName,
+}: LanguageSwitcherProps) {
   const pathname = usePathname();
   const currentLocale = getLocaleFromPath(pathname);
   const routeKey = getRouteKeyFromPath(pathname);
@@ -24,7 +33,7 @@ export function LanguageSwitcher() {
       aria-label={
         currentLocale === "de" ? "Sprachauswahl" : "Language selection"
       }
-      className="hidden items-center gap-2 self-center text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 lg:flex"
+      className={className}
     >
       {items.map((item, index) => {
         const isActive = item.locale === currentLocale;

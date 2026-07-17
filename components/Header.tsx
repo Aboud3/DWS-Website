@@ -62,6 +62,9 @@ export function Header() {
             {item.label}
           </Link>
         ))}
+        <LanguageSwitcher
+          className="sticky right-0 -mr-6 flex shrink-0 items-center gap-2 self-center border-l border-zinc-200 bg-white pl-5 pr-6 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500 lg:hidden"
+        />
       </nav>
     </header>
   );
