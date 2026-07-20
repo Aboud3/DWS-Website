@@ -24,14 +24,19 @@ const benefits = [
 
 const galleryItems: GalleryItem[] = [
   {
-    caption: "Lagerkoordination",
-    alt: "Lagerkoordination mit Smartphone im Arbeitsumfeld",
-    src: "/images/gallery/lager-smartphone.jpg",
+    caption: "Lagerhalle",
+    alt: "Außenansicht einer DWS-Lagerhalle",
+    src: "/images/gallery/dws-company/warehouse-exterior.jpg",
   },
   {
-    caption: "Terminplanung",
-    alt: "Kalenderansicht zur Koordination wiederkehrender Abläufe",
-    src: "/images/gallery/dws-kalender.jpg",
+    caption: "Lagergang",
+    alt: "Lagergang mit Hochregalen bei DWS",
+    src: "/images/gallery/dws-company/warehouse-aisle.jpg",
+  },
+  {
+    caption: "Lagerplatzkennzeichnung",
+    alt: "Kennzeichnung eines Lagerplatzes im DWS-Lager",
+    src: "/images/gallery/dws-company/warehouse-rack-location.jpg",
   },
 ];
 
@@ -98,14 +103,14 @@ export default function LagerlogistikPage() {
             </p>
           </div>
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden border border-zinc-300 bg-white">
+        <div className="relative aspect-[6/5] w-full overflow-hidden">
           <Image
-            src="/images/gallery/lager-smartphone.jpg"
-            alt="Lagerkoordination mit Smartphone im Arbeitsumfeld bei DWS"
+            src="/images/gallery/dws-company/warehouse-pallet-storage.jpg"
+            alt="Blick in einen belegten Lagergang bei DWS"
             fill
             loading="eager"
             sizes="(min-width: 1024px) 45vw, 100vw"
-            className="object-cover grayscale saturate-[0.75] contrast-[0.95]"
+            className="object-cover object-[center_28%]"
           />
         </div>
       </section>
@@ -133,6 +138,23 @@ export default function LagerlogistikPage() {
         steps={steps}
         benefits={benefits}
         galleryItems={galleryItems}
+        labels={{
+          workflowEyebrow: "Ablauf",
+          workflowTitle: "So arbeitet DWS",
+          workflowDescription:
+            "Die Umsetzung wird projektbezogen abgestimmt und in nachvollziehbaren Schritten vorbereitet.",
+          benefitsEyebrow: "Nutzen",
+          benefitsTitle: "Ihr Vorteil",
+          benefitsDescription:
+            "Die Vorteile liegen in klaren Abläufen, abgestimmten Übergaben und einer Umsetzung, die zum jeweiligen Projekt passt.",
+          galleryEyebrow: "Einblicke",
+          galleryTitle: "Einblicke in die Lagerlogistik",
+          galleryDescription:
+            "Beispiele aus Lagerung, Lagerinfrastruktur und Lagerorganisation bei DWS.",
+          relatedTitle: "Verbundene Leistungen",
+          relatedEyebrow: "Leistung",
+          relatedCta: "Zur Leistung",
+        }}
         relatedLinks={[
           {
             label: "Druck",

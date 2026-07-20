@@ -36,7 +36,7 @@ export default function EnglishContactPage() {
               fill
               loading="eager"
               sizes="100vw"
-              className="object-cover grayscale saturate-[0.75] contrast-[0.95]"
+              className="object-cover"
             />
           </div>
         </div>

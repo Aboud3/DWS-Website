@@ -61,8 +61,8 @@ export default function EnglishWarehouseLogisticsPage() {
           "Call-offs, time windows and shipping channels are coordinated so that recurring processes remain manageable.",
         ],
         image: {
-          src: "/images/gallery/lager-smartphone.jpg",
-          alt: "Warehouse coordination with a smartphone in the working area",
+          src: "/images/gallery/dws-company/warehouse-pallet-storage.jpg",
+          alt: "View into a stocked warehouse aisle at DWS",
         },
       }}
       detailsSection={
@@ -94,14 +94,19 @@ export default function EnglishWarehouseLogisticsPage() {
       ]}
       galleryItems={[
         {
-          caption: "Warehouse coordination",
-          alt: "Warehouse coordination with a smartphone in the working area",
-          src: "/images/gallery/lager-smartphone.jpg",
+          caption: "Warehouse exterior",
+          alt: "Exterior view of a DWS warehouse",
+          src: "/images/gallery/dws-company/warehouse-exterior.jpg",
         },
         {
-          caption: "Scheduling",
-          alt: "Calendar view for coordinating recurring workflows",
-          src: "/images/gallery/dws-kalender.jpg",
+          caption: "Warehouse aisle",
+          alt: "Warehouse aisle with high-bay racking at DWS",
+          src: "/images/gallery/dws-company/warehouse-aisle.jpg",
+        },
+        {
+          caption: "Warehouse location labeling",
+          alt: "Warehouse location labeling in the DWS facility",
+          src: "/images/gallery/dws-company/warehouse-rack-location.jpg",
         },
       ]}
       relatedLinks={[
@@ -124,9 +129,9 @@ export default function EnglishWarehouseLogisticsPage() {
         benefitsTitle: "What this improves",
         benefitsDescription:
           "Storage and shipping can be linked more closely so recurring processes remain easier to plan.",
-        galleryTitle: "Storage and coordination views",
+        galleryTitle: "Insights into warehouse logistics",
         galleryDescription:
-          "Examples from warehouse coordination and scheduling.",
+          "Examples of storage, warehouse infrastructure and warehouse organization at DWS.",
       }}
       ctaTitle="Looking for a warehouse-supported shipping solution?"
       ctaDescription="DWS supports storage, stock preparation and shipping coordination for recurring B2B workflows."

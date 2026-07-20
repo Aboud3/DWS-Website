@@ -215,8 +215,8 @@ export default function EnglishLettershopPage() {
           "Manual and machine-assisted steps are combined when formats, inserts or workflows require it.",
         ],
         image: {
-          src: "/images/gallery/mailing-kuvert.jpg",
-          alt: "Envelope as part of shipping preparation at DWS",
+          src: "/images/gallery/dws-company/lettershop-machine-overview.jpg",
+          alt: "Automated lettershop system at DWS",
         },
       }}
       detailsSection={
@@ -258,9 +258,9 @@ export default function EnglishLettershopPage() {
       ]}
       galleryItems={[
         {
-          caption: "Envelope preparation",
-          alt: "Envelope as part of shipping preparation",
-          src: "/images/gallery/mailing-kuvert.jpg",
+          caption: "Mailing materials",
+          alt: "Stacked print and mailing materials in DWS production",
+          src: "/images/gallery/dws-company/lettershop-output-stack.jpg",
         },
         {
           caption: "Mailing",

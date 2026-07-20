@@ -123,7 +123,7 @@ export default function EnglishPrintPage() {
             fill
             loading="eager"
             sizes="(min-width: 1024px) 45vw, 100vw"
-            className="object-cover grayscale saturate-[0.75] contrast-[0.95]"
+            className="object-cover"
           />
         </div>
       </section>

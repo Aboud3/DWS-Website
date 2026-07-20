@@ -62,7 +62,7 @@ export function HeroSlideshow({ slides }: HeroSlideshowProps) {
           priority={index === 0}
           loading={index === 0 ? undefined : "eager"}
           sizes="(min-width: 1280px) 552px, (min-width: 1024px) 42vw, 100vw"
-          className="hero-slideshow-slide object-contain [filter:drop-shadow(0_18px_24px_rgba(17,17,17,0.16))]"
+          className="hero-slideshow-slide object-contain"
           data-slide-index={index}
           style={
             hasMultipleSlides

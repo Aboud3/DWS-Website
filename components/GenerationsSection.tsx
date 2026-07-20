@@ -9,7 +9,6 @@ type GenerationPortrait = {
   image?: {
     src: string;
     alt: string;
-    preserveColor?: boolean;
   };
 };
 
@@ -47,11 +46,7 @@ export function GenerationsSection({
                     alt={portrait.image.alt}
                     fill
                     sizes="(min-width: 768px) 30vw, 100vw"
-                    className={`object-cover object-center ${
-                      portrait.image.preserveColor
-                        ? ""
-                        : "grayscale saturate-[0.7] contrast-[1.02]"
-                    }`}
+                    className="object-cover object-center"
                   />
                 ) : portrait.placeholderLabel ? (
                   <>

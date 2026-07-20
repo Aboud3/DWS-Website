@@ -84,6 +84,13 @@ export function EnglishServicePage({
       "Examples from production, processing or logistics coordination.",
   },
 }: EnglishServicePageProps) {
+  const isDwsLettershopIntro =
+    intro.image.src ===
+    "/images/gallery/dws-company/lettershop-machine-overview.jpg";
+  const isDwsLogisticsIntro =
+    intro.image.src ===
+    "/images/gallery/dws-company/warehouse-pallet-storage.jpg";
+
   return (
     <>
       <PageHero
@@ -104,16 +111,41 @@ export function EnglishServicePage({
             ))}
           </div>
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden border border-zinc-300 bg-white">
-          <Image
-            src={intro.image.src}
-            alt={intro.image.alt}
-            fill
-            loading="eager"
-            sizes="(min-width: 1024px) 45vw, 100vw"
-            className="object-cover grayscale saturate-[0.75] contrast-[0.95]"
-          />
-        </div>
+        {isDwsLettershopIntro ? (
+          <div className="self-center">
+            <Image
+              src={intro.image.src}
+              alt={intro.image.alt}
+              width={5529}
+              height={3511}
+              loading="eager"
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
+        ) : isDwsLogisticsIntro ? (
+          <div className="relative aspect-[6/5] w-full overflow-hidden">
+            <Image
+              src={intro.image.src}
+              alt={intro.image.alt}
+              fill
+              loading="eager"
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover object-[center_28%]"
+            />
+          </div>
+        ) : (
+          <div className="relative aspect-[4/3] overflow-hidden border border-zinc-300 bg-white">
+            <Image
+              src={intro.image.src}
+              alt={intro.image.alt}
+              fill
+              loading="eager"
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        )}
       </section>
 
       {detailsSection ?? (

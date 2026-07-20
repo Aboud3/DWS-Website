@@ -27,9 +27,9 @@ const benefits = [
 
 const galleryItems: GalleryItem[] = [
   {
-    caption: "Kuvertierung",
-    alt: "Kuvert als Bestandteil der Versandvorbereitung",
-    src: "/images/gallery/mailing-kuvert.jpg",
+    caption: "Mailingunterlagen",
+    alt: "Gestapelte Druck- und Mailingunterlagen in der DWS-Produktion",
+    src: "/images/gallery/dws-company/lettershop-output-stack.jpg",
   },
   {
     caption: "Mailing",
@@ -272,14 +272,15 @@ export default function LettershopPage() {
             </p>
           </div>
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden border border-zinc-300 bg-white">
+        <div className="self-center">
           <Image
-            src="/images/gallery/mailing-kuvert.jpg"
-            alt="Kuvert als Bestandteil der Versandvorbereitung bei DWS"
-            fill
+            src="/images/gallery/dws-company/lettershop-machine-overview.jpg"
+            alt="Automatisierte Lettershop-Anlage bei DWS"
+            width={5529}
+            height={3511}
             loading="eager"
             sizes="(min-width: 1024px) 45vw, 100vw"
-            className="object-cover grayscale saturate-[0.75] contrast-[0.95]"
+            className="h-auto w-full"
           />
         </div>
       </section>

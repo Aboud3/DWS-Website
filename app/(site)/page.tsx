@@ -71,13 +71,13 @@ const galleryItems: GalleryItem[] = [
   },
   {
     caption: "Versandvorbereitung",
-    alt: "Einblick in die Versandvorbereitung bei DWS",
-    src: "/images/gallery/einblicke/mailing-kuvert.png",
+    alt: "Automatisierte Verarbeitung von Mailingunterlagen bei DWS",
+    src: "/images/gallery/dws-company/lettershop-machine-processing.jpg",
   },
   {
-    caption: "Lagerkoordination",
-    alt: "Einblick in die Lagerkoordination bei DWS",
-    src: "/images/gallery/einblicke/lager-smartphone.png",
+    caption: "Lagerlogistik",
+    alt: "Lagergang mit Hochregalen bei DWS",
+    src: "/images/gallery/dws-company/warehouse-aisle.jpg",
   },
   {
     caption: "Mailingbestandteile",

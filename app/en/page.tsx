@@ -106,13 +106,13 @@ const galleryItems: GalleryItem[] = [
   },
   {
     caption: "Dispatch preparation",
-    alt: "Insight into dispatch preparation at DWS",
-    src: "/images/gallery/einblicke/mailing-kuvert.png",
+    alt: "Automated processing of mailing materials at DWS",
+    src: "/images/gallery/dws-company/lettershop-machine-processing.jpg",
   },
   {
-    caption: "Warehouse coordination",
-    alt: "Insight into warehouse coordination at DWS",
-    src: "/images/gallery/einblicke/lager-smartphone.png",
+    caption: "Warehouse logistics",
+    alt: "Warehouse aisle with high-bay racking at DWS",
+    src: "/images/gallery/dws-company/warehouse-aisle.jpg",
   },
   {
     caption: "Mailing components",
