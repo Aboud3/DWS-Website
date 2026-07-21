@@ -79,9 +79,40 @@ export default function KontaktPage() {
           </div>
         </address>
 
-        {/* TODO: form submission backend needed. */}
-        <form className="grid gap-5 border border-zinc-200 bg-zinc-50 p-7 shadow-line">
+        <form
+          id="contact-form"
+          action="/contact.php"
+          method="post"
+          acceptCharset="UTF-8"
+          className="grid gap-5 border border-zinc-200 bg-zinc-50 p-7 shadow-line"
+        >
+          <input type="hidden" name="language" value="de" />
+          <div aria-hidden="true" className="absolute left-[-10000px] top-auto h-px w-px overflow-hidden">
+            <label htmlFor="website">Website</label>
+            <input
+              id="website"
+              name="website"
+              type="text"
+              autoComplete="off"
+              tabIndex={-1}
+            />
+          </div>
           <div className="border-b border-zinc-200 pb-5">
+            <p
+              id="success"
+              role="status"
+              className="mb-4 hidden border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm leading-6 text-emerald-900 target:block"
+            >
+              Vielen Dank. Ihre Anfrage wurde erfolgreich gesendet.
+            </p>
+            <p
+              id="error"
+              role="alert"
+              className="mb-4 hidden border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-900 target:block"
+            >
+              Ihre Anfrage konnte nicht gesendet werden. Bitte prüfen Sie Ihre
+              Angaben oder schreiben Sie direkt an post@dws-logistik.de.
+            </p>
             <h2 className="text-2xl font-semibold text-ink">Anfrage senden</h2>
             <p className="mt-3 text-sm leading-6 text-zinc-600">
               Wir melden uns nach Eingang Ihrer Anfrage zeitnah zurück.
@@ -96,6 +127,9 @@ export default function KontaktPage() {
                 id="name"
                 name="name"
                 type="text"
+                required
+                maxLength={120}
+                autoComplete="name"
                 className="mt-2 min-h-12 w-full border border-zinc-300 bg-white px-4 text-base"
               />
             </div>
@@ -110,6 +144,8 @@ export default function KontaktPage() {
                 id="company"
                 name="company"
                 type="text"
+                maxLength={160}
+                autoComplete="organization"
                 className="mt-2 min-h-12 w-full border border-zinc-300 bg-white px-4 text-base"
               />
             </div>
@@ -123,6 +159,9 @@ export default function KontaktPage() {
                 id="email"
                 name="email"
                 type="email"
+                required
+                maxLength={254}
+                autoComplete="email"
                 className="mt-2 min-h-12 w-full border border-zinc-300 bg-white px-4 text-base"
               />
             </div>
@@ -134,6 +173,8 @@ export default function KontaktPage() {
                 id="phone"
                 name="phone"
                 type="tel"
+                maxLength={60}
+                autoComplete="tel"
                 className="mt-2 min-h-12 w-full border border-zinc-300 bg-white px-4 text-base"
               />
             </div>
@@ -146,17 +187,28 @@ export default function KontaktPage() {
               id="message"
               name="message"
               rows={7}
+              required
+              maxLength={5000}
               className="mt-2 w-full border border-zinc-300 bg-white px-4 py-3 text-base"
             />
           </div>
           <button
-            type="button"
+            type="submit"
             className="min-h-12 bg-ink px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
           >
             Anfrage senden
           </button>
           <p className="text-sm leading-6 text-zinc-500">
-            Bitte senden Sie keine sensiblen Daten über dieses Formular.
+            Mit dem Absenden werden Ihre Angaben zur Bearbeitung Ihrer Anfrage
+            verarbeitet. Bitte senden Sie keine sensiblen Daten. Weitere
+            Informationen finden Sie in der{" "}
+            <a
+              href="/datenschutz/"
+              className="font-semibold text-ink underline decoration-zinc-300 underline-offset-4 hover:decoration-ink"
+            >
+              Datenschutzerklärung
+            </a>
+            .
           </p>
         </form>
       </section>

@@ -81,9 +81,40 @@ export default function EnglishContactPage() {
           </div>
         </address>
 
-        {/* TODO: form submission backend needed. */}
-        <form className="grid gap-5 border border-zinc-200 bg-zinc-50 p-7 shadow-line">
+        <form
+          id="contact-form"
+          action="/contact.php"
+          method="post"
+          acceptCharset="UTF-8"
+          className="grid gap-5 border border-zinc-200 bg-zinc-50 p-7 shadow-line"
+        >
+          <input type="hidden" name="language" value="en" />
+          <div aria-hidden="true" className="absolute left-[-10000px] top-auto h-px w-px overflow-hidden">
+            <label htmlFor="website">Website</label>
+            <input
+              id="website"
+              name="website"
+              type="text"
+              autoComplete="off"
+              tabIndex={-1}
+            />
+          </div>
           <div className="border-b border-zinc-200 pb-5">
+            <p
+              id="success"
+              role="status"
+              className="mb-4 hidden border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm leading-6 text-emerald-900 target:block"
+            >
+              Thank you. Your inquiry was sent successfully.
+            </p>
+            <p
+              id="error"
+              role="alert"
+              className="mb-4 hidden border border-red-200 bg-red-50 px-4 py-3 text-sm leading-6 text-red-900 target:block"
+            >
+              Your inquiry could not be sent. Please check your information or
+              email post@dws-logistik.de directly.
+            </p>
             <h2 className="text-2xl font-semibold text-ink">Start inquiry</h2>
             <p className="mt-3 text-sm leading-6 text-zinc-600">
               We will respond promptly after receiving your request.
@@ -91,19 +122,53 @@ export default function EnglishContactPage() {
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {[
-              ["name", "Name", "text"],
-              ["company", "Company", "text"],
-              ["email", "Email", "email"],
-              ["phone", "Phone", "tel"],
-            ].map(([id, label, type]) => (
-              <div key={id}>
-                <label htmlFor={id} className="text-sm font-semibold text-ink">
-                  {label}
+              {
+                id: "name",
+                label: "Name",
+                type: "text",
+                required: true,
+                maxLength: 120,
+                autoComplete: "name",
+              },
+              {
+                id: "company",
+                label: "Company",
+                type: "text",
+                required: false,
+                maxLength: 160,
+                autoComplete: "organization",
+              },
+              {
+                id: "email",
+                label: "Email",
+                type: "email",
+                required: true,
+                maxLength: 254,
+                autoComplete: "email",
+              },
+              {
+                id: "phone",
+                label: "Phone",
+                type: "tel",
+                required: false,
+                maxLength: 60,
+                autoComplete: "tel",
+              },
+            ].map((field) => (
+              <div key={field.id}>
+                <label
+                  htmlFor={field.id}
+                  className="text-sm font-semibold text-ink"
+                >
+                  {field.label}
                 </label>
                 <input
-                  id={id}
-                  name={id}
-                  type={type}
+                  id={field.id}
+                  name={field.id}
+                  type={field.type}
+                  required={field.required}
+                  maxLength={field.maxLength}
+                  autoComplete={field.autoComplete}
                   className="mt-2 min-h-12 w-full border border-zinc-300 bg-white px-4 text-base"
                 />
               </div>
@@ -117,17 +182,28 @@ export default function EnglishContactPage() {
               id="message"
               name="message"
               rows={7}
+              required
+              maxLength={5000}
               className="mt-2 w-full border border-zinc-300 bg-white px-4 py-3 text-base"
             />
           </div>
           <button
-            type="button"
+            type="submit"
             className="min-h-12 bg-ink px-5 text-sm font-semibold text-white transition hover:bg-zinc-800"
           >
             Send inquiry
           </button>
           <p className="text-sm leading-6 text-zinc-500">
-            Please do not send sensitive data through this form.
+            By submitting this form, your information will be processed to
+            handle your inquiry. Please do not send sensitive data. Further
+            information is available in the{" "}
+            <a
+              href="/en/privacy-policy/"
+              className="font-semibold text-ink underline decoration-zinc-300 underline-offset-4 hover:decoration-ink"
+            >
+              Privacy Policy
+            </a>
+            .
           </p>
         </form>
       </section>
