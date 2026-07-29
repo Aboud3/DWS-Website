@@ -104,16 +104,12 @@ export default function EnglishPrivacyPolicyPage() {
             <address className="border border-zinc-200 bg-white p-6 not-italic shadow-line">
               <p>DWS Druckwerbe-Service + Logistik GmbH</p>
               <p>Managing Director: Manuel Lienau</p>
-              <p>Hengsener Str. 8a</p>
-              <p>44309 Dortmund</p>
-              <p>Germany</p>
+              <p>Hengsener Str. 8a, 44309 Dortmund, Germany</p>
               <p>
                 <a href="tel:+4902319250550" className={linkClass}>
                   Tel.: +49(0)231-925055-0
                 </a>
-              </p>
-              <p>
-                Email:{" "}
+                , Email:{" "}
                 <a href="mailto:post@dws-logistik.de" className={linkClass}>
                   post@dws-logistik.de
                 </a>
@@ -126,35 +122,17 @@ export default function EnglishPrivacyPolicyPage() {
               II. Name and address of the Data Protection Officer
             </h2>
             <p className={paragraphClass}>
-              The Data Protection Officer of the controller is, pursuant to Art.
-              39 GDPR and Section 7 BDSG (new):
+              The Data Protection Officer can be contacted pursuant to Art. 39
+              GDPR and Section 7 BDSG (new) at:
             </p>
             <address className="border border-zinc-200 bg-white p-6 not-italic shadow-line">
-              <p>Online-Agentur Rüsche</p>
-              <p>c/o ARKM</p>
-              <p>Bunsenstr. 5</p>
-              <p>51647 Gummersbach</p>
-              <p>Germany</p>
               <p>
-                <a href="tel:+49022619989242" className={linkClass}>
-                  Tel.: +49(0)2261-9989-242
+                <a href="tel:+4902319250550" className={linkClass}>
+                  Tel.: +49(0)231-925055-0
                 </a>
-              </p>
-              <p>
-                Email:{" "}
-                <a href="mailto:datenschutz@sor.de" className={linkClass}>
-                  datenschutz@sor.de
-                </a>
-              </p>
-              <p>
-                Website:{" "}
-                <a
-                  href="https://www.sor.de/datenschutzbeauftragter"
-                  className={linkClass}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  https://www.sor.de/datenschutzbeauftragter
+                , Email:{" "}
+                <a href="mailto:datenschutz@dws-logistik.de" className={linkClass}>
+                  datenschutz@dws-logistik.de
                 </a>
               </p>
             </address>
