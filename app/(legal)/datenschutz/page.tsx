@@ -112,16 +112,12 @@ export default function DatenschutzPage() {
             <address className="border border-zinc-200 bg-white p-6 not-italic shadow-line">
               <p>DWS Druckwerbe-Service + Logistik GmbH</p>
               <p>Geschäftsführer: Manuel Lienau</p>
-              <p>Hengsener Str. 8a</p>
-              <p>44309 Dortmund</p>
-              <p>Deutschland</p>
+              <p>Hengsener Str. 8a, 44309 Dortmund, Deutschland</p>
               <p>
                 <a href="tel:+4902319250550" className={linkClass}>
                   Tel.: +49(0)231-925055-0
                 </a>
-              </p>
-              <p>
-                E-Mail:{" "}
+                , E-Mail:{" "}
                 <a href="mailto:post@dws-logistik.de" className={linkClass}>
                   post@dws-logistik.de
                 </a>
@@ -134,35 +130,17 @@ export default function DatenschutzPage() {
               II. Name und Anschrift des Datenschutzbeauftragten
             </h2>
             <p className={paragraphClass}>
-              Der Datenschutzbeauftragte des Verantwortlichen ist gem. Art. 39
-              DSGVO und §7 BDSG (neu):
+              Sie können den Datenschutzbeauftragten gem. Art. 39 DSGVO und §7
+              BDSG (neu) erreichen unter:
             </p>
             <address className="border border-zinc-200 bg-white p-6 not-italic shadow-line">
-              <p>Online-Agentur Rüsche</p>
-              <p>c/o ARKM</p>
-              <p>Bunsenstr. 5</p>
-              <p>51647 Gummersbach</p>
-              <p>Deutschland</p>
               <p>
-                <a href="tel:+49022619989242" className={linkClass}>
-                  Tel.: +49(0)2261-9989-242
+                <a href="tel:+4902319250550" className={linkClass}>
+                  Tel.: +49(0)231-925055-0
                 </a>
-              </p>
-              <p>
-                E-Mail:{" "}
-                <a href="mailto:datenschutz@sor.de" className={linkClass}>
-                  datenschutz@sor.de
-                </a>
-              </p>
-              <p>
-                Website:{" "}
-                <a
-                  href="https://www.sor.de/datenschutzbeauftragter"
-                  className={linkClass}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  https://www.sor.de/datenschutzbeauftragter
+                , E-Mail:{" "}
+                <a href="mailto:datenschutz@dws-logistik.de" className={linkClass}>
+                  datenschutz@dws-logistik.de
                 </a>
               </p>
             </address>
@@ -475,7 +453,7 @@ export default function DatenschutzPage() {
               </h3>
               <p className={paragraphClass}>
                 Rechtsgrundlage für die Verarbeitung der Daten nach Anmeldung
-                zum Newsletters durch den Nutzer ist bei Vorliegen einer
+                zum Newsletter durch den Nutzer ist bei Vorliegen einer
                 Einwilligung des Nutzers Art. 6 Abs. 1 lit. a DSGVO.
               </p>
             </section>
