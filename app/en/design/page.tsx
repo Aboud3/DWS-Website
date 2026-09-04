@@ -24,8 +24,8 @@ export default function EnglishDesignPage() {
     <>
       <PageHero
         eyebrow="DESIGN"
-        title="Design aligned with production."
-        description="Layout, data and print preparation are coordinated so that print, assembly, storage and shipping can follow in a structured process."
+        title="Design and digitization aligned with production."
+        description="Layout, the transfer of analogue data into digital data, and print preparation are coordinated so that printing, finishing, storage and shipping can follow on efficiently."
       />
 
       <section className="border-b border-zinc-200 bg-white">
@@ -46,6 +46,16 @@ export default function EnglishDesignPage() {
                 course for later costs is already set at the concept stage.
                 Postal requirements must be observed so there are no surprises
                 in postage costs later on.
+              </p>
+            </div>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-[0.36fr_0.64fr] lg:gap-12">
+            <SectionHeading title="Digitization" />
+            <div className="text-lg leading-8 text-zinc-600 lg:pt-2">
+              <p>
+                Whether consumption bills, patient records or general documents, we
+                digitize your analogue materials and convert them into digital data in
+                the format you require.
               </p>
             </div>
           </div>

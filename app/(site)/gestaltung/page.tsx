@@ -24,8 +24,8 @@ export default function GestaltungPage() {
     <>
       <PageHero
         eyebrow="DESIGN"
-        title="Design im Zusammenspiel mit Produktion."
-        description="Layout, Daten und Druckvorbereitung werden so abgestimmt, dass sich Druck, Konfektionierung, Lagerung und Versand sinnvoll anschließen können."
+        title="Design und Digitalisierung im Zusammenspiel mit Produktion."
+        description="Layout, Transfer von analogen in digitale Daten und Druckvorbereitung werden so abgestimmt, dass sich Druck, Konfektionierung, Lagerung und Versand sinnvoll anschließen können."
       />
 
       <section className="border-b border-zinc-200 bg-white">
@@ -47,6 +47,16 @@ export default function GestaltungPage() {
                 bereits in der Konzeption werden die Weichen für spätere Kosten
                 gestellt. Postalische Vorgaben sind einzuhalten, damit es
                 nachher bei den Portokosten nicht zu Überraschungen kommt.
+              </p>
+            </div>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-[0.36fr_0.64fr] lg:gap-12">
+            <SectionHeading title="Digitalisierung" />
+            <div className="text-lg leading-8 text-zinc-600 lg:pt-2">
+              <p>
+                Ob Verbrauchsrechnungen, Patientenakten, allgemeine Schriftstücke … – wir
+                digitalisieren Ihre analogen Produkte und wandeln diese in digitale Daten im
+                gewünschten Format um.
               </p>
             </div>
           </div>

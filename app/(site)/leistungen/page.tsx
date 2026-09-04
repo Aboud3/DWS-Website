@@ -11,8 +11,8 @@ const serviceOverviews = [
   {
     title: "Design",
     href: getRoute("de", "design"),
-    text: "DWS gestaltet Drucksachen, Mailings und projektbezogene Printmaterialien.",
-    tasks: ["Gestaltung", "Layout"],
+    text: "DWS gestaltet Drucksachen, Mailings und projektbezogene Printmaterialien bzw. wandelt analoge Daten in digitale Daten um.",
+    tasks: ["Gestaltung", "Layout", "Digitalisierung"],
   },
   {
     title: "Druck",
