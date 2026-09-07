@@ -46,7 +46,7 @@ export const services: Service[] = [
     eyebrow: "Design",
     description:
       "Layout, Datenaufbereitung und druckfertige Vorbereitung als Grundlage für Produktion, Verarbeitung und Versand.",
-    points: ["Layout und Satz", "Datenaufbereitung", "Druckfertige Dateien"],
+    points: ["Layout und Satz", "Datenaufbereitung", "Digitalisierung"],
   },
   {
     title: "Druck",

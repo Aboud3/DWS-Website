@@ -18,7 +18,7 @@ const services: Service[] = [
     eyebrow: "Design",
     description:
       "Layout, data preparation and print-ready setup before production, processing and shipping.",
-    points: ["Layout setup", "Data preparation", "Print-ready files"],
+    points: ["Layout setup", "Data preparation", "Digitization"],
   },
   {
     title: "Print",
